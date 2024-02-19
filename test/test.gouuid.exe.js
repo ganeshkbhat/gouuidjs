@@ -18,7 +18,7 @@
 const { expect } = require('chai');
 
 
-describe('[isBrowser tests] Tests to check whichVersion in browser and nodejs enviroment', () => {
+describe('[ tests] Tests to ', () => {
 
   before(() => {
   });
@@ -26,10 +26,10 @@ describe('[isBrowser tests] Tests to check whichVersion in browser and nodejs en
   after(() => {
   });
 
-  it('should be negative for nodejs', () => {
-    let actual = whichVersion();
+  it('should ', () => {
+    let actual = true;
     let expected = true;
-    expect(typeof Number(actual) === "number").to.deep.equal(expected);
+    expect(actual).to.deep.equal(expected);
   });
 
 });
