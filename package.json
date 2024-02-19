@@ -11,7 +11,7 @@
   "scripts": {
     "preinstall": "npm i wasm-opt -g",
     "iwasmopt": "npm i wasm-opt -g",
-    "buildwasm": "$Env:GOOS = 'js'; $Env:GOARCH = 'wasm'; go build -o gouuid.wasm main.go",
+    "buildwasm": "set GOOS = 'js'; set GOARCH = 'wasm'; go build -o gouuid.wasm main.go",
     "test": "mocha --reporter spec --recursive --timeout 60000",
     "gobuild": "go build",
     "gitadd": "git add .",
@@ -21,6 +21,8 @@
     "test": "test"
   },
   "pre-commit": [
+    "gobuild",
+    "buildwasm",
     "gitadd",
     "test"
   ],
