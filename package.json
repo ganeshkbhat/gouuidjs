@@ -1,7 +1,7 @@
 {
   "name": "gouuid",
   "version": "1.0.0",
-  "description": "",
+  "description": "get the uuid package to get uuid v6, v7 versions of uuid using gouuidjs - wasm port of google uuid package",
   "main": "index.js",
   "exports": {
     "require": "./index.js",

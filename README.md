@@ -1,5 +1,5 @@
 ### gouuidjs
-run the google uuid package to get uuid v6, v7, v4 versions of uuid using gouuidjs
+get the uuid package to get uuid v6, v7 versions of uuid using gouuidjs - wasm port of google uuid package
 
 the demos can be found in the folder [demos](https://github.com/ganeshkbhat/gouuidjs/tree/main/demos)
 
