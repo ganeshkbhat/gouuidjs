@@ -28,8 +28,10 @@ func GetUUID(args []string) string {
 			id := uuid.New()
 			return id.String()
 		}
+	} else {
+		id := uuid.New()
+		return id.String()
 	}
-	return ""
 }
 
 func main() {
