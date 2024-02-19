@@ -12,7 +12,6 @@
     "preinstall": "npm i wasm-opt -g",
     "iwasmopt": "npm i wasm-opt -g",
     "test": "mocha --reporter spec --recursive --timeout 60000",
-    "browserify": "browserify index.js > browser.js",
     "uglify": "uglifyjs --compress --mangle reserved=['$','require','exports'] index.js -o index.min.js"
   },
   "directories": {
