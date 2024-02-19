@@ -8,7 +8,10 @@ import (
 )
 
 func GetUUID(args []string) string {
-	total_args := len(os.Args[1:])
+	total_args := len(args[1:])
+	if total_args == 0 {
+		args[1] = ""
+	}
 	if total_args > 0 {
 		v := strings.ToLower(args[1])
 		switch v {
