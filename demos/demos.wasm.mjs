@@ -19,3 +19,4 @@ import { GetUUID } from '../gouuid.wasm';
 import * as go from '../gouuid.wasm';
 
 console.log(GetUUID([".", "."]))
+console.log(go.GetUUID([".", "."]))
