@@ -17,8 +17,19 @@
 
 const fs = require('node:fs');
 const wasmBuffer = fs.readFileSync('./gouuid.wasm');
-WebAssembly.instantiate(wasmBuffer).then(wasmModule => {
+const gojs = require("gojs");
+
+const importObject = {
+  imports: {
+    imported_func(arg) {
+      console.log(arg);
+    },
+  },
+};
+
+WebAssembly.instantiate(wasmBuffer, importObject).then(wasmModule => {
   const go = wasmModule.instance.exports;
+  console.log(go);
   const uuid = go.GetUUID(["", "V7"]);
   console.log(uuid); 
 });

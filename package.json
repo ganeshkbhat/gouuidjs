@@ -58,6 +58,5 @@
   },
   "homepage": "https://github.com/ganeshkbhat/gouuid.git#readme",
   "author": "Ganesh B <ganeshsurfs@gmail.com>",
-  "license": "MIT",
-  "dependencies": {}
+  "license": "MIT"
 }
