@@ -11,14 +11,17 @@
   "scripts": {
     "preinstall": "npm i wasm-opt -g",
     "iwasmopt": "npm i wasm-opt -g",
-    "buildwasm": "go build; $Env:GOOS = 'js'; $Env:GOARCH = 'wasm'; go build -o gouuid.wasm main.go",
+    "buildwasm": "$Env:GOOS = 'js'; $Env:GOARCH = 'wasm'; go build -o gouuid.wasm main.go",
     "test": "mocha --reporter spec --recursive --timeout 60000",
+    "gobuild": "go build",
+    "gitadd": "git add .",
     "uglify": "uglifyjs --compress --mangle reserved=['$','require','exports'] index.js -o index.min.js"
   },
   "directories": {
     "test": "test"
   },
   "pre-commit": [
+    "gitadd",
     "test"
   ],
   "keywords": [
