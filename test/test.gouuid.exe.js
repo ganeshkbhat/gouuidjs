@@ -20,11 +20,8 @@ const { expect } = require('chai');
 
 describe('[ tests] Tests to ', () => {
 
-  before(() => {
-  });
-
-  after(() => {
-  });
+  before(() => { });
+  after(() => { });
 
   it('should ', () => {
     let actual = true;
