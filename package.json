@@ -11,6 +11,7 @@
   "scripts": {
     "preinstall": "npm i wasm-opt -g",
     "iwasmopt": "npm i wasm-opt -g",
+    "copywasmexecjs": "cp '$(go env GOROOT)/misc/wasm/wasm_exec.js' .",
     "buildwasm": "set GOOS = 'js'; set GOARCH = 'wasm'; go build -o gouuid.wasm main.go",
     "test": "mocha --reporter spec --recursive --timeout 60000",
     "gobuild": "go build",
@@ -58,5 +59,8 @@
   },
   "homepage": "https://github.com/ganeshkbhat/gouuid.git#readme",
   "author": "Ganesh B <ganeshsurfs@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^3.3.2"
+  }
 }
